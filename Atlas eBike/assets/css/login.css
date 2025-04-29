@@ -1,0 +1,165 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.3) url('../foto/backgroundTT.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.login-page {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 70px; /* Adjust based on navbar height */
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 28px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.message, .signin {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.signin a {
+    color: #fff;
+}
+
+.signin a:hover {
+    text-decoration: underline;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.form label .input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.submit {
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.site-footer {
+    margin-top: auto;
+}
+
+.success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 15px;
+    color: #212121;
+    padding: 20px 40px;
+    text-align: center;
+    z-index: 1000;
+    max-width: 400px;
+    width: 90%;
+    animation: fadeInScale 0.5s ease-out, disappear 2s forwards 2s;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes disappear {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.success::before {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #212121;
+}
